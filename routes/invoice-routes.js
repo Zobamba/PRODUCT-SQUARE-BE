@@ -1,4 +1,4 @@
-import InvoiceController from "../controller/invoice-controller.js";
+import InvoiceController from "../controller/invoice-controller";
 
 export default function invoiceRoutes(app) {
   app.get('/invoices', InvoiceController.getAllInvoice);

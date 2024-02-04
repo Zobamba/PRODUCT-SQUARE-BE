@@ -1,6 +1,7 @@
+import models from '../models';
 import { v4 as uuidv4 } from 'uuid';
-import billingInfo from '../models/billinginfo.js'
-import orderInvoice from '../models/orderinvoice.js'
+
+const { billingInfo, orderInvoice } = models;
 
 class BillingController {
   postBillingInfo(req, res, next) {

@@ -1,7 +1,8 @@
-import orderInvoice from '../models/orderinvoice.js'
+import models from '../models';
 import sequelize from 'sequelize';
 
 const { Op } = sequelize;
+const { orderInvoice } = models;
 
 class InvoiceController {
   getAllInvoice(req, res) {
