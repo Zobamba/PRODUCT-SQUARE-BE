@@ -1,6 +1,7 @@
 import express from 'express';
 import routes from './routes/routes';
 import bodyParser from 'body-parser';
+import dbConnection from './utils/database.js';
 import cors from 'cors';
 
 const dotenv = require('dotenv');
@@ -29,5 +30,7 @@ app.get('/', (req, res) => {
 });
 
 routes(app);
+
+dbConnection();
 
 app.listen(PORT, console.log(`Index app listening on http://localhost:${PORT}`))
