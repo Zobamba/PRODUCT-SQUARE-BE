@@ -51,10 +51,10 @@ class BillingController {
     orderInvoice.create({
       orderId: uuidv4(),
       billingName: req.body.firstName + ' ' + req.body.lastName,
-      // paymentStatus: 'Payment Failed',
+      paymentStatus: 'Paid',
       total: 115,
       paymentMethod: 'Credit Card',
-      // orderStatus: 'Cancelled'
+      orderStatus: 'Delivered'
     }).then(() => {
       return;
     }).catch((error) => {
