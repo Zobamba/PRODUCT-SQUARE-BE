@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const sequelize = new Sequelize(process.env.DB_URL, {
+const sequelize = new Sequelize({
   username: "onahbernardchizoba",
   password: "DhEbtkn39CwO",
   database: "p-square-db",
