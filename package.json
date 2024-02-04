@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r esm index.js",
+    "start": "node index.js",
     "migrate": "npx sequelize-cli db:migrate",
     "undo-migration": "npx sequelize-cli db:migrate:undo",
     "undo-specific": "npx sequelize-cli db:migrate:undo --name"

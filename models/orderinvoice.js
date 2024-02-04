@@ -1,19 +1,15 @@
+// orderinvoice.js
 'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class orderInvoice extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+import { Model, DataTypes } from 'sequelize';
+
+export default (sequelize) => {
+  class OrderInvoice extends Model {
     static associate(models) {
       // define association here
     }
   }
-  orderInvoice.init({
+
+  OrderInvoice.init({
     orderId: DataTypes.STRING,
     billingName: DataTypes.STRING,
     paymentStatus: {
@@ -28,5 +24,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'orderInvoice',
   });
-  return orderInvoice;
+
+  return OrderInvoice;
 };
