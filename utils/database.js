@@ -4,13 +4,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const sequelize = new Sequelize(process.env.DB_URL, {
-  dialect: 'postgres',
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
+  username: "onahbernardchizoba",
+  password: "DhEbtkn39CwO",
+  database: "p-square-db",
+  host: "ep-round-moon-23141132.us-east-2.aws.neon.tech",
+  dialect: "postgres",
+  "dialectOptions": {
+    "ssl": true
+  }
 });
 
 export default async function dbConnection() {
