@@ -1,15 +1,19 @@
-// billinginfo.js
 'use strict';
-import { Model, DataTypes } from 'sequelize';
-
-export default (sequelize) => {
-  class BillingInfo extends Model {
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class billingInfo extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
     static associate(models) {
       // define association here
     }
   }
-
-  BillingInfo.init({
+  billingInfo.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -27,7 +31,6 @@ export default (sequelize) => {
   }, {
     sequelize,
     modelName: 'billingInfo',
-  });  
-
-  return BillingInfo;
+  });
+  return billingInfo;
 };
