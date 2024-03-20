@@ -1,4 +1,6 @@
-{
+require('dotenv').config(); 
+
+module.exports = {
   "development": {
     "username": "chizoba",
     "password": "onah2020",
@@ -14,13 +16,13 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "onahbernardchizoba",
-    "password": "DhEbtkn39CwO",
-    "database": "p-square-db",
-    "host": "ep-round-moon-23141132.us-east-2.aws.neon.tech",
+    "username": process.env.DB_USERNAME,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DB_DATABASE,
+    "host": process.env.DB_HOST,
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": true
     }
   }
-}
+};
